@@ -1,0 +1,174 @@
+
+<section class="h-100 h-custom gradient-custom-2">
+  <!-- <div class="container-fluid" *ngIf="isCheck"> -->
+  <form #myform="ngForm" (ngSubmit)="onSubmit() " >
+    <h1>Employee Registration</h1>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
+                    
+                     <div class="mb-4 pb-2">
+                      <select class="select">
+                        <option value="1">Title</option>
+                        <option value="2">Mr</option>
+                        <option value="3">Mr's</option>
+                      </select>
+                    </div> 
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                          <input type="text" name="firstname" class="form-control form-control-lg" placeholder="FirstName" [(ngModel)]="user.firstname"  [class.is-invalid]="firstname.invalid && firstname.touched"   #firstname="ngModel"  required  >
+                          <small [class.d-none]="firstname.valid || firstname.untouched" class="text-danger">firstName is required</small>
+
+                        </div>
+  
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+  
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" placeholder="Last name" [(ngModel)]="user.lastname" name="lastname"  [class.is-invalid]="lastname.invalid && lastname.touched"   #lastname="ngModel"  required >
+                          <small [class.d-none]="lastname.valid || lastname.untouched" class="text-danger">lastName is required</small>
+                        </div>
+  
+                      </div>
+                    </div>
+                      <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="text"  class="form-control form-control-lg" placeholder="Employee Id" [(ngModel)]="user.id" name="id"  [class.is-invalid]="empid.invalid && empid.touched"   #empid="ngModel"  required >
+                        <small [class.d-none]="lastname.valid || lastname.untouched" class="text-danger">Employee Id is required</small>
+                      </div>
+                      </div>
+                     <div class="mb-4 pb-2"> 
+                      <select class="select">
+                        <option value="1">Select Sector</option>
+                        <option value="2">IT Sector </option>
+                        <option value="3">Hardware Sector</option>
+                        <option value="4">Sales </option>
+                      </select>
+                    </div> 
+                   
+                    
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="text"  class="form-control form-control-lg" placeholder="Position" [(ngModel)]="user.position" name="position" [class.is-invalid]="position.invalid && position.touched"   #position="ngModel"  required  />
+                        <small [class.d-none]="position.valid || position.untouched" class="text-danger">Position is required</small>
+                      </div>
+                    </div>
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="text"  class="form-control form-control-lg" placeholder="Enter Your Skills" [(ngModel)]="user.skills" name="skills"[class.is-invalid]="skills.invalid && skills.touched"   #skills="ngModel"  required />
+                        <small [class.d-none]="skills.valid || skills.untouched" class="text-danger">Skills is required</small>
+                      </div>
+                    </div>
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="text" class="form-control form-control-lg" placeholder="Experience" [(ngModel)]="user.experience" name="experience" [class.is-invalid]="experience.invalid && experience.touched"   #experience="ngModel"  required  />
+                        <small [class.d-none]="experience.valid || experience.untouched" class="text-danger">experience is required</small>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="col-lg-6 bg-indigo text-white">
+                  <div class="p-5">
+                    <h3 class="fw-normal mb-5">Contact Details</h3>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control form-control-lg" placeholder="HouseNo" [(ngModel)]="user.houseno" name="houseno" [class.is-invalid]="houseno.invalid && houseno.touched"   #houseno="ngModel"  required  />
+                        <small [class.d-none]="houseno.valid || houseno.untouched" class="text-danger">House No  is required</small>
+                      </div>
+                    </div>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control form-control-lg" placeholder="City" [(ngModel)]="user.city" name="city" [class.is-invalid]="city.invalid && city.touched"   #city="ngModel"  required  />
+                        <small [class.d-none]="city.valid || city.untouched" class="text-danger">City  is required</small> 
+                        
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-5 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" class="form-control form-control-lg" placeholder="Zip Code" [(ngModel)]="user.pincode" name="pincode" [class.is-invalid]="pincode.invalid && pincode.touched"   #pincode="ngModel"  required  />
+                          <small [class.d-none]="pincode.valid || pincode.untouched" class="text-danger">Zip code is required</small>
+                        </div>
+  
+                      </div>
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text"  class="form-control form-control-lg" placeholder="Place" [(ngModel)]="user.place" name="place" [class.is-invalid]="place.invalid && place.touched"   #place="ngModel"  required  />
+                          <small [class.d-none]="place.valid || place.untouched" class="text-danger">Place is required</small>
+                        </div>
+  
+                      </div>
+                    </div>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control form-control-lg" placeholder="Country" [(ngModel)]="user.country" name="country" [class.is-invalid]="country.invalid && country.touched"   #country="ngModel"  required  />
+                        <small [class.d-none]="country.valid || country.untouched" class="text-danger">Country  is required</small>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-5 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text"  class="form-control form-control-lg" placeholder="Code +" [(ngModel)]="user.code" name="code" [class.is-invalid]="code.invalid && code.touched"   #code="ngModel"  required />
+                          <small [class.d-none]="code.valid || code.untouched" class="text-danger">Code is required</small>
+                        </div>
+  
+                      </div>
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text"  class="form-control form-control-lg"  placeholder="Phone Number" [(ngModel)]="user.phone" name="phone" [class.is-invalid]="phone.invalid && phone.touched"   #phone="ngModel"  required />
+                          <small [class.d-none]="phone.valid || phone.untouched" class="text-danger">Phone number is required</small>
+                        </div>
+  
+                      </div>
+                    </div>
+  
+                    <div class="mb-4">
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea9" class="form-control form-control-lg" placeholder="Your Email" [(ngModel)]="user.email" name="email" [class.is-invalid]="email.invalid && email.touched"   #email="ngModel"  required  />
+                        <small [class.d-none]="email.valid || email.untouched" class="text-danger">Email id  is required</small>
+                      </div>
+                    </div>
+  
+                    <button type="sum" class="btn btn-danger btn-lg"
+                      data-mdb-ripple-color="dark">Submit</button>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </form>
+<!-- </div> -->
+  </section>
+  <!-- <h2 *ngIf="isCheck;else eblock" style="color:red">
+<div>{{user|json}}</div>
+  </h2>
+  <ng-template #eblock>
+    <p *ngFor="let t of tdf">{{t}}</p>
+  </ng-template>
+  <p *ngFor="let t of tdf|keyvalue">{{t.value}}</p> -->
+
+
+
+

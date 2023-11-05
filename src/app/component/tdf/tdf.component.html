@@ -1,0 +1,50 @@
+<!-- <div class="container-fluid">
+    <form  #myform="ngForm" (ngSubmit)="onSubmit() " novalidate>
+    <div class="row">
+        <h2>Registration form</h2>
+        <div class="col-6">
+          <div class="input-group">
+            <span class="input-group-text">Firstname</span>
+            <input type="text"  aria-label="First name" class="form-control" [class.is-invalid]="name.invalid && name.touched"  [(ngModel)]="usermodel.name"   name="firstname" #name="ngModel" required>
+          </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="text" class="form-control"    [(ngModel)]="usermodel.email"   name="email" #name="ngModel" required email>
+              
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="usermodel.password"name="password">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="male" [(ngModel)]="usermodel.gender" name="gender" >
+                <label class="form-check-label" for="inlineCheckbox1">male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox2" value="female" [(ngModel)]="usermodel.gender" name="gender">
+                <label class="form-check-label" for="inlineCheckbox2">female</label>
+              </div>
+              <select class="form-select mb-3" aria-label="Default select example" [(ngModel)]="usermodel.course" name="course">
+                <option selected>select your course</option>
+                <option value="1">angular</option>
+                <option value="2">java</option>
+                <option value="3">html</option>
+              </select>s
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1"  [(ngModel)]="usermodel.checkbox"name="checkbox">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div >
+        {{myform.value|json}}<br>
+        {{usermodel|json}}
+
+    </div>
+    </div>
+output1:{{observable$ | async}}<br>
+output2:{{observableData}} -->
